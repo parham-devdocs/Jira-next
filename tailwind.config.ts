@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
-
-export default {
+import tailwindAnimate from "tailwindcss-animate";
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -77,13 +77,20 @@ export default {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(-10px)" },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "bounce-up": "bounce-up .5s ease-in-out  forwards",
+        "bounce-up": "bounce-up 0.5s ease-in-out forwards",
+        fadeIn: "fadeIn 2s ease-in-out forwards",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+  plugins: [tailwindAnimate], // Move plugins outside of extend
+};
+
+export default config;

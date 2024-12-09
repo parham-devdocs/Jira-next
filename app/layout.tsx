@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/themeProvider";
 import { dark } from "@clerk/themes";
 import Footer from "@/components/Footer";
+
 import {
   ClerkProvider,
  
@@ -23,14 +24,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider appearance={{baseTheme:dark}}>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+        variables: {
+          colorBackground: "#2563eb",
+          
+        },
+    
+        
+      }}
+      
+    >
       <html lang="en">
         <body className={`${inter.className}`}>
           <ThemeProvider attribute="class" defaultTheme="dark">
             <main>
-              <Header/>
-              
-              {children}</main>
+              <Header />
+
+              {children}
+            </main>
             <Footer />
           </ThemeProvider>
         </body>
