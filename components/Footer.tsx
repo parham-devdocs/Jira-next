@@ -2,14 +2,13 @@ import Image from "next/image";
 import React from "react";
 
 import wave2 from "../public/wave (2).svg";
-import wave3 from "../public/wave (3).svg";
-import wave4 from "../public/wave (4).svg";
+
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="mx-36">
+    <footer className="mx-36 my-10">
       <div className="flex flex-col">
         <div className="flex justify-center relative h-[500px] overflow-hidden bg-blue-600 rounded-lg">
           <Image

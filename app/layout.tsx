@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/themeProvider";
+import { dark } from "@clerk/themes";
 import Footer from "@/components/Footer";
-
-const inter=Inter({subsets:["latin"]})
+import {
+  ClerkProvider,
+ 
+} from '@clerk/nextjs'
+import Header from "@/components/header";
+const inter = Inter({ subsets: ["latin"] })
 
 
 export const metadata: Metadata = {
@@ -18,13 +23,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <main>{children}</main>
-      <Footer/>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider appearance={{baseTheme:dark}}>
+      <html lang="en">
+        <body className={`${inter.className}`}>
+          <ThemeProvider attribute="class" defaultTheme="dark">
+            <main>
+              <Header/>
+              
+              {children}</main>
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
