@@ -2,7 +2,36 @@ import Image from "next/image";
 import Logo from "../public/logo2.png";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { BarChart, Calendar, ChevronRight, Layout } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+const features = [
+  {
+    title: "Intutive Kanban Boards",
+    description:
+      "Visualize your workflow and optimize team productivity with our easy-to-use kanban boards ",
+    icon: Layout,
+  },
+  {
+    title: "Powerful Sprint Planning ",
+    description:
+      "Plan and manage sprints effectively ,ensuring your team stays focused on delivering value ",
+    icon: Calendar,
+  },
+  {
+    title: "Comprehensive Reports",
+    description:
+      "Gain insights into your teams's performance with detailed ,customizable reports and analytics ",
+    icon: BarChart,
+  },
+];
 export default function Home() {
   return (
     <div className=" min-h-screen">
@@ -32,6 +61,24 @@ export default function Home() {
               Learn More
             </Button>
           </Link>
+        </div>
+      </section>
+      <section className=" bg-gray-900 py-20 px-5" id="features">
+        <div>
+          <h3 className=" text-center text-3xl font-bold mb-12">Key Features</h3>
+          <div className="flex container gap-6 mx-auto flex-wrap justify-center ">
+            {features.map((feature) => {
+              return (
+                <Card key={feature.title} className="w-[400px] py-2 bg-gray-800">
+                  <CardContent>
+                    <feature.icon className="h-12 w-12 mb-4 text-blue-300" />
+                    <h4 className=" text-xl gradient-title mb-4">{feature.title}</h4>
+                    <h5>{feature.description}</h5>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       </section>
     </div>
