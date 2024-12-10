@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import CompanyCarousel from "@/components/CompanyCarousel";
 
 const features = [
   {
@@ -35,6 +36,7 @@ const features = [
 export default function Home() {
   return (
     <div className=" min-h-screen">
+      {/* Hero */}
       <section className=" container mx-auto py-20 text-center">
         <h1 className=" text-6xl sm:text-7xl lg:text-8xl font-extrabold gradient-title  pb-6 flex flex-col gap-5 ">
           Streamline Your Workflow
@@ -63,22 +65,39 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      {/* Cards */}
       <section className=" bg-gray-900 py-20 px-5" id="features">
         <div>
-          <h3 className=" text-center text-3xl font-bold mb-12">Key Features</h3>
+          <h3 className=" text-center text-3xl font-bold mb-12">
+            Key Features
+          </h3>
           <div className="flex container gap-6 mx-auto flex-wrap justify-center ">
             {features.map((feature) => {
               return (
-                <Card key={feature.title} className="w-[400px] py-2 bg-gray-800">
+                <Card
+                  key={feature.title}
+                  className="w-[400px] py-2 bg-gray-800"
+                >
                   <CardContent>
                     <feature.icon className="h-12 w-12 mb-4 text-blue-300" />
-                    <h4 className=" text-xl gradient-title mb-4">{feature.title}</h4>
+                    <h4 className=" text-xl gradient-title mb-4">
+                      {feature.title}
+                    </h4>
                     <h5>{feature.description}</h5>
                   </CardContent>
                 </Card>
               );
             })}
           </div>
+        </div>
+      </section>
+      {/* Carousel */}
+      <section className="  py-20" >
+        <div>
+          <h3 className=" text-center text-3xl font-bold mb-12">
+        Trusted by industry leaders
+          </h3>
+         <CompanyCarousel/>
         </div>
       </section>
     </div>
