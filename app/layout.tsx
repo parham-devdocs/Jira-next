@@ -29,9 +29,13 @@ export default function RootLayout({
         baseTheme: dark,
         variables: {
           colorBackground: "#2563eb",
+          colorInputText: "#2784ed",
+          colorInputBackground: "#FFFFFF",
+          colorPrimary:"#FFFFFF"
+        
+          
           
         },
-    
         
       }}
       
