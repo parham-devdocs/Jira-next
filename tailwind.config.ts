@@ -37,7 +37,7 @@ const config: Config = {
           foreground: "hsl(var(--accent-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
+          DEFAULT: "#2563eb",
           foreground: "hsl(var(--destructive-foreground))",
         },
         border: "hsl(var(--border))",
