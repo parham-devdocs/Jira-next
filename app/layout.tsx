@@ -23,6 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <ClerkProvider
       appearance={{
@@ -41,7 +42,7 @@ export default function RootLayout({
       
     >
       <html lang="en">
-        <body className={`${inter.className}`}>
+        <body className={`${inter.className} dotted-bg`}>
           <ThemeProvider attribute="class" defaultTheme="dark">
             <main>
               <Header />
