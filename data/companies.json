@@ -32,6 +32,6 @@
     "id": 6
   },
   {"name":"google","path":"/companies/google.png","id":7},
-    {"name":"microsoft","path":"/companies/microsoft.png","id":8}
+    {"name":"microsoft","path":"/companies/microsoft.svg","id":8}
 
 ]

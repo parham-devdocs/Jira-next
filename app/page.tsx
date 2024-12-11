@@ -1,17 +1,13 @@
-import Image from "next/image";
-import Logo from "../public/logo2.png";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BarChart, Calendar, ChevronRight, Layout } from "lucide-react";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import CompanyCarousel from "@/components/CompanyCarousel";
+import Accordion from "@/components/Accordion";
 
 const features = [
   {
@@ -92,12 +88,20 @@ export default function Home() {
         </div>
       </section>
       {/* Carousel */}
-      <section className="  py-20" >
+      <section className="  py-20">
         <div>
           <h3 className=" text-center text-3xl font-bold mb-12">
-        Trusted by industry leaders
+            Trusted by industry leaders
           </h3>
-         <CompanyCarousel/>
+          <CompanyCarousel />
+        </div>
+      </section>
+      <section className="  py-20 bg-gray-900 px-5">
+        <div className=" container mx-auto">
+          <h3 className=" text-center text-3xl font-bold mb-12">
+           Frequently asked questions
+          </h3>
+          <Accordion/>
         </div>
       </section>
     </div>
