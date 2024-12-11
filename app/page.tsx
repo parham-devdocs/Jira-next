@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import CompanyCarousel from "@/components/CompanyCarousel";
 import Accordion from "@/components/Accordion";
+import CallToAction from "@/components/CallToAction";
 
 const features = [
   {
@@ -88,7 +89,7 @@ export default function Home() {
         </div>
       </section>
       {/* Carousel */}
-      <section className="  py-20">
+      <section className="  py-20 dotted-background ">
         <div>
           <h3 className=" text-center text-3xl font-bold mb-12">
             Trusted by industry leaders
@@ -99,9 +100,14 @@ export default function Home() {
       <section className="  py-20 bg-gray-900 px-5">
         <div className=" container mx-auto">
           <h3 className=" text-center text-3xl font-bold mb-12">
-           Frequently asked questions
+            Frequently asked questions
           </h3>
-          <Accordion/>
+          <Accordion />
+        </div>
+      </section>
+      <section >
+        <div className="  mx-auto ">
+          <CallToAction />
         </div>
       </section>
     </div>

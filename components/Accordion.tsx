@@ -9,8 +9,8 @@ const AccordionComponent = () => {
   return (
 
     <Accordion type="single" collapsible>
-      {Faqs.map(q => {
-        return   <AccordionItem value={q.question} key={q.question}>
+      {Faqs.map((q,index) => {
+        return   <AccordionItem value={`value-${index}`} key={index}>
         <AccordionTrigger>{q.question}</AccordionTrigger>
         <AccordionContent>
         {q.answer}

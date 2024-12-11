@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-  .gradient-title{
-    @apply font-extrabold bg-gradient-to-br from-blue-700 via-blue-100 to-blue-400 bg-clip-text tracking-tighter text-transparent pr-2 pb-2
+@layer utilities {
+  .gradient-title {
+    @apply font-extrabold bg-gradient-to-br from-blue-700 via-blue-100 to-blue-400 bg-clip-text tracking-tighter text-transparent pr-2 pb-2;
+  }
+
+  .dotted-background {
+    background-image: radial-gradient(circle, rgb(84, 84, 84) 1px, transparent 1px);
+    background-size: 10px 10px; /* Adjust size as needed */
+    background-color:rgb(17, 24, 39); /* Change to your desired background color */
   }
 }
+
 
 
 body {
